@@ -1,0 +1,14 @@
+applications:
+- disk_quota: 1024M
+  host: java-dashdb
+  name: java-dashdb
+  path: target/JavaDBApp.war
+  domain: mybluemix.net
+  instances: 1
+  memory: 512M
+  buildpack: https://github.com/cloudfoundry/ibm-websphere-liberty-buildpack.git
+  env:
+    IBM_JVM_LICENSE: L-PMAA-A3Z8P2
+    IBM_LIBERTY_LICENSE: L-SWIS-A99U5C
+  services:
+  - dashDB-k6
